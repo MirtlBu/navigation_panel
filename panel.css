@@ -150,35 +150,22 @@ li:nth-child(4) > a{
     -o-transform:       skewY(-50deg) rotate(-15deg);
     left: 67.64705882352941%;/*115/170*/
 }
-#end{
+.end{
     background: transparent url("end.svg") no-repeat 0;
     width: 1000px;
     height: 900px;
-    position: absolute;
-    left: 10.4117181314331%;
-    top: 44px;
-    -webkit-transition: -webkit-transform 10s ease-in-out;
-    transition: transform 10s ease-in-out;
 }
-#end:target, #end:target ~ div.panelwrap{
-    -webkit-transform: translateY( -550px);
-    transform: translateY( -550px );
+#anchor:target, #anchor:target ~ div.panelwrap{
+    -webkit-transform: translateY( -2550px);
+    transform: translateY( -2550px );
 }
-div.stufffar{
-    -webkit-transition: -webkit-transform 7s ease-in-out;
-    transition: transform 7s ease-in-out;
+#anchor:target ~ div.stufffar{
+    -webkit-transform: translateY( -1550px);
+    transform: translateY( -1550px );
 }
-div.stuffclose{
-    -webkit-transition: -webkit-transform 5s ease-in-out;
-    transition: transform 5s ease-in-out;
-}
-#end:target ~ div.stufffar{
-    -webkit-transform: translateY( -20px);
-    transform: translateY( -20px );
-}
-#end:target ~ div.stuffclose{
-    -webkit-transform: translateY( -10px);
-    transform: translateY( -10px);
+#anchor:target ~ div.stuffclose{
+    -webkit-transform: translateY( -1550px);
+    transform: translateY( -1550px );
 }
 .back{
     background-color: rgba(196, 196, 196, 1);
@@ -213,6 +200,8 @@ p{
     height: 1900px;
     content: "";
     z-index: 5;
+    -webkit-transition: -webkit-transform 8s ease-in-out;
+    transition: transform 8s ease-in-out;
 }
 .stuffclose{
     background: transparent url("jar1.svg") no-repeat;
@@ -223,10 +212,16 @@ p{
     height: 1900px;
     content: "";
     z-index: 6;
+    -webkit-transition: -webkit-transform 5s ease-in-out;
+    transition: transform 5s ease-in-out;
 }
 .fuckchrome *{
     -webkit-transition: none !important;
     -moz-transition: none !important;
     -ms-transition: none !important;
     -o-transition: none !important;
+}
+#anchor{
+    position: absolute;
+    top: 0;
 }
