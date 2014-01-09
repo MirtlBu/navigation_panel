@@ -3,15 +3,46 @@ body{
     padding: 0;
     width: 100%;
 }
+p{
+    font-family: 'Quando', serif;
+    text-indent: 50px;
+    color: rgba(72, 72, 72, 1);
+    letter-spacing: 2px;
+    line-height: 150%;
+    font-size: 24px;
+}
 .panelwrap{
     width: 1000px;
     height: 1200px;
     position: absolute;
     left: 10.4117181314331%;
     background-color: rgba(196, 196, 196, 1);
-    -webkit-transition: -webkit-transform 10s ease-in-out;
-    transition: transform 10s ease-in-out;
+    -webkit-transition: top 10s ease-out;
+    transition: top 10s ease-out;
 }
+input.switchers{
+    display: none;
+}
+label{
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: relative;
+    cursor: pointer;
+    z-index: 6;
+    -webkit-transition: top 10s ease-out;
+    transition: top 10s ease-out;
+}
+#switchdown + label{
+    border-top: 40px solid rgba(64, 64 , 64, 1);
+    top: 260px;
+    left: 605px;
+}
+#switchup  + label{
+    border-bottom: 40px solid rgba(64, 64 , 64, 1);
+    top: 2760px;
+    left: 545px;
+}
+/*----------------------------------semicircle panel-------------------------------------*/
 .panel{
     width: 100%;
     height: 25%;/*300/300*/
@@ -88,12 +119,14 @@ li{
     -webkit-transform-origin: 100% 100%;
     -o-transform-origin: 100% 100%;
     box-shadow: inset 0 0 0 1px rgba(96, 96, 96, 0.5);
-    transition: 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 li:hover{
     color: rgba(24, 24, 24, 0.9);
     background-color: rgba(196, 196, 196, 0.6);
     box-shadow: inset 0 0 10px 3px rgba(96, 96, 96, 0.8);
+    cursor: pointer;
 }
 li:focus{
     color: red;
@@ -150,47 +183,28 @@ li:nth-child(4) > a{
     -o-transform:       skewY(-50deg) rotate(-15deg);
     left: 67.64705882352941%;/*115/170*/
 }
-.end{
-    background: transparent url("end.svg") no-repeat 0;
-    width: 1000px;
-    height: 900px;
-}
-#anchor:target, #anchor:target ~ div.panelwrap{
-    -webkit-transform: translateY( -2550px);
-    transform: translateY( -2550px );
-}
-#anchor:target ~ div.stufffar{
-    -webkit-transform: translateY( -1550px);
-    transform: translateY( -1550px );
-}
-#anchor:target ~ div.stuffclose{
-    -webkit-transform: translateY( -1550px);
-    transform: translateY( -1550px );
-}
+/*----------------------------------------falling girl's elements---------------------------------------*/
+
 .back{
     background-color: rgba(196, 196, 196, 1);
     width: 900px;
     height: 2270px;
     padding: 0 50px 0 50px;
 }
-p{
-    font-family: 'Quando', serif;
-    text-indent: 50px;
-    color: rgba(72, 72, 72, 1);
-    letter-spacing: 2px;
-    line-height: 150%;
-    font-size: 24px;
+.end{
+    background: transparent url("end.svg") no-repeat 0;
+    width: 1000px;
+    height: 900px;
 }
-.front{
+.girl{
     background: transparent url("girl.svg") no-repeat 0;
     position: fixed;
     top: 300px;
-    left: 550px;
+    left: 555px;
     height: 300px;
     width: 160px;
     z-index: 5;
 }
-
 .stufffar{
     background: transparent url("jar.svg") no-repeat;
     position: absolute;
@@ -200,8 +214,8 @@ p{
     height: 1900px;
     content: "";
     z-index: 5;
-    -webkit-transition: -webkit-transform 8s ease-in-out;
-    transition: transform 8s ease-in-out;
+    -webkit-transition: top 8s ease-out;
+    transition: top 8s ease-out;
 }
 .stuffclose{
     background: transparent url("jar1.svg") no-repeat;
@@ -212,16 +226,34 @@ p{
     height: 1900px;
     content: "";
     z-index: 6;
-    -webkit-transition: -webkit-transform 5s ease-in-out;
-    transition: transform 5s ease-in-out;
+    -webkit-transition: top 5s ease-out;
+    transition: top 5s ease-out;
 }
-.fuckchrome *{
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
+/*--------------------------------flow down---------------------------------------------------------------------------*/
+#switchdown[type=radio]:checked + label, #switchdown[type=radio]:checked ~ div.panelwrap{
+    top: -2585px;
 }
-#anchor{
-    position: absolute;
+#switchdown[type=radio]:checked ~ #switchup[type=radio] + label{
+    top: 150px;
+}
+#switchdown[type=radio]:checked ~ div.stufffar{
+    top: -1670px;
+}
+#switchdown[type=radio]:checked ~ div.stuffclose{
+    top: -1400px;
+}
+/*-----------------------------flow up-------------------------------------------------------------------------------*/
+#switchup[type=radio]:checked ~ #switchdown[type=radio] + label, #switchup[type=radio]:checked ~ div.panelwrap{
     top: 0;
 }
+#switchup[type=radio]:checked + label{
+    top: 2760px;
+}
+#switchup[type=radio]:checked ~ div.stufffar{
+    top: 230px;
+}
+#switchup[type=radio]:checked ~ div.stuffclose{
+    top: 230px;
+}
+
+
