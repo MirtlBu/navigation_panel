@@ -11,15 +11,8 @@ $(document).ready(function(){
             $(".front").css("background-position", 0 + "px")
         }
     }
-    function remImportant(e){
-        $("body").removeClass("fuckchrome");
-        e.stopPropagation();
-    }
     $(window).scroll(function(){
         update();
-    });
-    $("li").click(function(){
-        remImportant();
     });
 
 })
