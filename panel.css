@@ -4,12 +4,17 @@ body{
     width: 100%;
 }
 p{
-    font-family: 'Quando', serif;
+    font-size: 24px;
     text-indent: 50px;
     color: rgba(72, 72, 72, 1);
     letter-spacing: 2px;
     line-height: 150%;
-    font-size: 24px;
+}
+@font-face {
+    font-family: 'Quando';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Quando-Regular'), url(http://themes.googleusercontent.com/static/fonts/quando/v2/qVv1zuxOTRil_FcBMa30Kg.woff) format('woff');
 }
 .panelwrap{
     width: 1000px;
