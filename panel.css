@@ -13,39 +13,46 @@ p{
 }
 .panelwrap{
     width: 1000px;
-    height: 1200px;
+    height: 3490px;
     position: absolute;
+    top: 0;
     left: 10.4117181314331%;
     background-color: rgba(196, 196, 196, 1);
-    -webkit-transition: top 10s ease-out;
-    transition: top 10s ease-out;
+    -webkit-transition: top 15s ease-out;
+    -moz-transition: top 15s ease-out;
+    -ms-transition: top 15s ease-out;
+    -o-transition: top 15s ease-out;
+    transition: top 15s ease-out;
 }
 input.switchers{
-    display: none;
+    position: absolute;
+    left: -9999px;
 }
 label{
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    position: relative;
+    position: absolute;
+    left: 605px;
     cursor: pointer;
     z-index: 6;
-    -webkit-transition: top 10s ease-out;
-    transition: top 10s ease-out;
+    -webkit-transition: top 16s ease-out;
+    -moz-transition: top 16s ease-out;
+    -ms-transition: top 16s ease-out;
+    -o-transition: top 16s ease-out;
+    transition: top 16s ease-out;
 }
 #switchdown + label{
     border-top: 40px solid rgba(64, 64 , 64, 1);
-    top: 260px;
-    left: 605px;
+    top: 230px;
 }
 #switchup  + label{
     border-bottom: 40px solid rgba(64, 64 , 64, 1);
     top: 2760px;
-    left: 545px;
 }
 /*----------------------------------semicircle panel-------------------------------------*/
 .panel{
     width: 100%;
-    height: 25%;/*300/300*/
+    height: 8.595988538681948%;/*300/3490*/
     position: relative;
     background-color: rgba(48, 48, 48, 1);
     overflow: hidden;
@@ -105,6 +112,7 @@ ul:after{
     top: 20%;/*60/300*/
     box-shadow: 0 0 5px 2px rgba(88,88,88, 0.5);
     z-index: 2;
+    overflow: hidden;
 }
 li{
     list-style: none;
@@ -115,11 +123,16 @@ li{
     position: absolute;
     left: -6.666666666666667%;/*-20/300*/
     top: -15.66666666666667%;/*-47/300*/
-    transform-origin: 100% 100%;
     -webkit-transform-origin: 100% 100%;
+    -moz-transform: 100% 100%;
+    -ms-transform: 100% 100%;
     -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
     box-shadow: inset 0 0 0 1px rgba(96, 96, 96, 0.5);
     -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 li:hover{
@@ -133,24 +146,32 @@ li:focus{
     outline: none;
    }
 li:nth-child(1){
-    transform:         rotate(-41deg) skewY(50deg);
-    -webkit-transform: rotate(-41deg) skewY(50deg);
-    -o-transform:      rotate(-41deg) skewY(50deg);
+    transform:          rotate(-41deg) skewY(50deg);
+    -webkit-transform:  rotate(-41deg) skewY(50deg);
+    -moz-transform:     rotate(-41deg) skewY(50deg);
+    -ms-transform:      rotate(-41deg) skewY(50deg);
+    -o-transform:       rotate(-41deg) skewY(50deg);
 }
 li:nth-child(2){
-    transform:         rotate(0deg) skewY(50deg);
-    -webkit-transform: rotate(0deg) skewY(50deg);
-    -o-transform:      rotate(0deg) skewY(50deg)
+    transform:          rotate(0deg) skewY(50deg);
+    -webkit-transform:  rotate(0deg) skewY(50deg);
+    -moz-transform:     rotate(0deg) skewY(50deg);
+    -ms-transform:      rotate(0deg) skewY(50deg);
+    -o-transform:       rotate(0deg) skewY(50deg);
 }
 li:nth-child(3){
-    transform:         rotate(41deg) skewY(50deg);
-    -webkit-transform: rotate(41deg) skewY(50deg);
-    -o-transform:      rotate(41deg) skewY(50deg);
+    transform:          rotate(41deg) skewY(50deg);
+    -webkit-transform:  rotate(41deg) skewY(50deg);
+    -moz-transform:     rotate(41deg) skewY(50deg);
+    -ms-transform:      rotate(41deg) skewY(50deg);
+    -o-transform:       rotate(41deg) skewY(50deg);
 }
 li:nth-child(4){
-    transform:         rotate(82deg) skewY(50deg);
-    -webkit-transform: rotate(82deg) skewY(50deg);
-    -o-transform:      rotate(82deg) skewY(50deg);
+    transform:          rotate(82deg) skewY(50deg);
+    -webkit-transform:  rotate(82deg) skewY(50deg);
+    -moz-transform:     rotate(82deg) skewY(50deg);
+    -ms-transform:      rotate(82deg) skewY(50deg);
+    -o-transform:       rotate(82deg) skewY(50deg);
 }
 a{
     color: inherit;
@@ -162,24 +183,32 @@ a{
 li:nth-child(1) > a{
     transform:          skewY(-50deg) rotate(-30deg);
     -webkit-transform:  skewY(-50deg) rotate(-30deg);
+    -moz-transform:     skewY(-50deg) rotate(-30deg);
+    -ms-transform:      skewY(-50deg) rotate(-30deg);
     -o-transform:       skewY(-50deg) rotate(-30deg);
     left: 67.64705882352941%;/*115/170*/
 }
 li:nth-child(2) > a{
     transform:          skewY(-50deg) rotate(-25deg);
     -webkit-transform:  skewY(-50deg) rotate(-25deg);
+    -moz-transform:     skewY(-50deg) rotate(-25deg);
+    -ms-transform:      skewY(-50deg) rotate(-25deg);
     -o-transform:       skewY(-50deg) rotate(-25deg);
     left: 64.70588235294118%;/*110/170*/
 }
 li:nth-child(3) > a{
     transform:          skewY(-50deg) rotate(-15deg);
     -webkit-transform:  skewY(-50deg) rotate(-15deg);
+    -moz-transform:     skewY(-50deg) rotate(-15deg);
+    -ms-transform:      skewY(-50deg) rotate(-15deg);
     -o-transform:       skewY(-50deg) rotate(-15deg);
     left: 67.64705882352941%;/*115/170*/
 }
 li:nth-child(4) > a{
     transform:          skewY(-50deg) rotate(-15deg);
     -webkit-transform:  skewY(-50deg) rotate(-15deg);
+    -moz-transform:     skewY(-50deg) rotate(-15deg);
+    -ms-transform:      skewY(-50deg) rotate(-15deg);
     -o-transform:       skewY(-50deg) rotate(-15deg);
     left: 67.64705882352941%;/*115/170*/
 }
@@ -197,7 +226,7 @@ li:nth-child(4) > a{
     height: 900px;
 }
 .girl{
-    background: transparent url("girl.svg") no-repeat 0;
+    background: transparent url("girl.svg") no-repeat -215px;
     position: fixed;
     top: 300px;
     left: 555px;
@@ -208,26 +237,32 @@ li:nth-child(4) > a{
 .stufffar{
     background: transparent url("jar.svg") no-repeat;
     position: absolute;
-    top: 230px;
+    top: 280px;
     left: 132px;
     width: 1000px;
-    height: 1900px;
+    height: 2000px;
     content: "";
     z-index: 5;
-    -webkit-transition: top 8s ease-out;
-    transition: top 8s ease-out;
+    -webkit-transition: top 10s ease-out;
+    -moz-transition: top 10s ease-out;
+    -ms-transition: top 10s ease-out;
+    -o-transition: top 10s ease-out;
+    transition: top 10s ease-out;
 }
 .stuffclose{
     background: transparent url("jar1.svg") no-repeat;
     position: absolute;
-    top: 230px;
+    top: 280px;
     left: 132px;
     width: 1000px;
-    height: 1900px;
+    height: 2000px;
     content: "";
     z-index: 6;
-    -webkit-transition: top 5s ease-out;
-    transition: top 5s ease-out;
+    -webkit-transition: top 7s ease-out;
+    -moz-transition: top 7s ease-out;
+    -ms-transition: top 7s ease-out;
+    -o-transition: top 7s ease-out;
+    transition: top 7s ease-out;
 }
 /*--------------------------------flow down---------------------------------------------------------------------------*/
 #switchdown[type=radio]:checked + label, #switchdown[type=radio]:checked ~ div.panelwrap{
@@ -237,10 +272,13 @@ li:nth-child(4) > a{
     top: 150px;
 }
 #switchdown[type=radio]:checked ~ div.stufffar{
-    top: -1670px;
+    top: -1950px;
 }
 #switchdown[type=radio]:checked ~ div.stuffclose{
-    top: -1400px;
+    top: -2300px;
+}
+#switchdown[type=radio]:checked ~ div.girl{
+    background: transparent url("girl.svg") no-repeat 0;
 }
 /*-----------------------------flow up-------------------------------------------------------------------------------*/
 #switchup[type=radio]:checked ~ #switchdown[type=radio] + label, #switchup[type=radio]:checked ~ div.panelwrap{
