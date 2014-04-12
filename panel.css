@@ -243,7 +243,7 @@ li:nth-child(4) > a{
     background: transparent url("jar.svg") no-repeat;
     position: absolute;
     top: 300px;
-    left: 132px;
+    left: 10.4117181314331%;
     width: 1000px;
     height: 2000px;
     content: "";
@@ -258,7 +258,7 @@ li:nth-child(4) > a{
     background: transparent url("jar1.svg") no-repeat;
     position: absolute;
     top: 280px;
-    left: 132px;
+    left: 10.4117181314331%;
     width: 1000px;
     height: 2000px;
     content: "";
